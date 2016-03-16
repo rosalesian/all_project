@@ -649,7 +649,7 @@
                     <br>
                     <hr>
             <!-- <form> -->
-            {!! Form::open(['url' => 'dranix/careers']) !!}
+            {!! Form::open(['url' => 'homes', 'files' => true]) !!}
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -679,7 +679,7 @@
                         <div class="form-group">
                           <label for="exampleInputFile">Upload Resume</label>
                          <!--  <input type="file" id="exampleInputFile"> -->
-                         {!! Form::file('file', ['id' => 'exampleInputFile']) !!}
+                         {!! Form::file('resume', ['resume' => 'resume', 'name' => 'resume']) !!}
                          
                         </div>
                     </div>
@@ -688,7 +688,6 @@
                     <label for="exampleInputEmail1">Message</label>
                     <textarea class="form-control" rows="3"></textarea>
                 </div>
-                
                 <button type="submit" class="btn tf-btn btn-default">Submit</button>
            <!--  </form> -->
            {!! Form::close() !!}

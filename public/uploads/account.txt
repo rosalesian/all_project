@@ -1,0 +1,140 @@
+yahooo account
+bobster_moning
+password
+MEmyselfandIan
+
+git hub
+username : rosales1986
+password : MEmyselfandIan1986
+
+file zilla 
+username :  dranix
+password :  dranix@dm1n
+
+
+dranix website
+admin
+ddiphnx
+
+golden_kaizen
+username: irosales
+password: MEmyselfandGalai1986
+
+zpanel 
+username : zadmin	
+password : drag0n1
+
+phpmyadmin
+username : admin
+password : 'login' => 'admin',
+  'password' => 'p@ssw0rd',
+  'database' => 'zadmin_www2',
+  
+  
+  
+  /var/zpanel/hostdata/zadmin/public_html/dranix_com_ph/app/webroot/files
+  
+ internal id 
+
+database user
+username : bad_order
+password : dranix
+
+
+principal
+
+192.168.253.111
+
+
+local area connection
+sandbox
+https://system.sandbox.netsuite.com/pages/customerlogin.jsp
+
+usernam­­­­e:
+gso8412@gmail.com
+password:
+Net123456789
+new password:
+MEmyselfandIan1986
+
+password for eclipse
+rosales123Ian
+
+saved list
+
+dranix website
+admin
+ddiphnx
+
+192.168.253.111
+
+fabijay@dranix.com.ph
+
+https://dranix.com.ph/mail/
+username:
+irosales@dranix.com.ph
+password:
+irosales1
+
+C:\Program Files\MySQL\MySQL Workbench 6.1 CE
+
+fabijay@dranix.com.ph	
+
+
+irosales@dranix.com.ph
+
+
+fabijay@dranix.com.ph
+
+transactio
+-salels
+function
+page_init
+save_record
+
+
+field_change
+
+composer create-project laravel/laravel {directory} "~5.0.0" --prefer-dist
+
+google account
+iurosales.pgkhc@gmail.com
+old: wo7vhbr459
+new : rosales123Ian
+
+
+spotify
+bobster_moning
+password:
+rosales
+
+ddiphnx
+
+MEmyselfandIan1986
+
+fdsa
+
+netsuite admin
+irosales@dranix.com.ph
+rosales123Ian
+
+
+paypalaccount
+email: gso8412@gmail
+password : MEmyselfandIan@
+
+uploader account gmail
+gmail account : uploader.employee@gmail.com
+username : uploader.employee
+password : uploader123
+
+https://www.google.com/settings/security/lesssecureapps
+
+NEW ACCOUNT NETSUITE
+username : iurosales.pgkhc@gmail.com
+password : Netsuite123
+
+github account
+username : rosalesian
+email : 	iurosales.pgkhc@gmail.com
+password : rosales123Ian
