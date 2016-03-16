@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Career;
 use App\Branch;
+use \Input as Input;
 
 class HomesController extends Controller
 {
@@ -42,7 +43,17 @@ class HomesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+      if($request->hasFile('resume')) {
+
+            echo 'Uploaded<br />';  
+            //$file = $request->file('resume');
+           // $file->move('uploads', $file->getClientOriginalName());
+           // $name = $request->file('resume')->getClientOriginalName();
+
+         //return $name;
+            echo  base_path();
+      }
     }
 
     /**
