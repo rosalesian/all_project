@@ -686,7 +686,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Message</label>
-                    <textarea class="form-control" rows="3"></textarea>
+                   
+                    {!! Form::textarea('message', null, ['class' => 'form-control', 'rows' => '3', 'placeholder' => 'Type Your Message']) !!}
                 </div>
                 <button type="submit" class="btn tf-btn btn-default">Submit</button>
            <!--  </form> -->

@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Career;
 use App\Branch;
 use \Input as Input;
+use Response;
+use App\Applicant;
 
 class HomesController extends Controller
 {
@@ -43,17 +45,31 @@ class HomesController extends Controller
      */
     public function store(Request $request)
     {
+        $data = [];
        
-      if($request->hasFile('resume')) {
+        if($request->hasFile('resume')) {
 
-            echo 'Uploaded<br />';  
-            //$file = $request->file('resume');
-           // $file->move('uploads', $file->getClientOriginalName());
-           // $name = $request->file('resume')->getClientOriginalName();
+            $file = $request->file('resume');
+            $file->move('uploads', $file->getClientOriginalName());
 
-         //return $name;
-            echo  base_path();
-      }
+            $data = [
+                'career_id' => $request->career_id,
+                'branch_id' => $request->branch_id,
+                'name' => $request->name,
+                'email' => $request->email,
+                'message' => $request->message,
+                'status' => 'unread',
+                'file_name' => $request->file('resume')->getClientOriginalName(),
+                'resume' => base_path() . '/public/uploads/'.$request->file('resume')->getClientOriginalName()
+            ];
+
+            $applicant = Applicant::create($data);
+        }
+
+        $careers = Career::all();
+        $careers_list = Career::lists('title', 'id');
+        $branch_list = Branch::lists('branch_name' ,'id');
+        return view('public.homes.index', compact('careers', 'careers_list', 'branch_list'));
     }
 
     /**
