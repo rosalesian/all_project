@@ -36,7 +36,7 @@
 
     <script type="text/javascript" src="{{ asset('js/modernizr.custom.js') }}"></script>
   <body>
-    @include('include.header')
+    @include('includes.headers')
     <!-- Home Page
     ==========================================-->
    <div id="tf-home" class="text-center">
@@ -695,7 +695,7 @@
             </div>  
         </div>
     </div>
-   @include('include.footer')
+   @include('includes.footer')
       
    
 
