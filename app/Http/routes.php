@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('users.login');
 });
 
 Route::resource('homes', 'HomesController');
+Route::get('login', 'UsersController@getLogin');
+
+Route::group(['prefix' => 'admin'], function(){
+	Route::resource('users', 'UsersController');
+	Route::post('requestLogin', 'UsersController@requestLogin');
+});
