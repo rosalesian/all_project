@@ -4,7 +4,7 @@
         <section class="content">
           <div class="row">
             <div class="col-md-3">
-              <a href="compose.html" class="btn btn-primary btn-block margin-bottom">Compose</a>
+              <a href="{{ url('admin/compose') }}" class="btn btn-primary btn-block margin-bottom">Compose</a>
               <div class="box box-solid">
                 <div class="box-header with-border">
                   <h3 class="box-title">Folders</h3>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="box-body no-padding">
                   <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#"><i class="fa fa-inbox"></i> Inbox <span class="label label-primary pull-right">12</span></a></li>
+                    <li class="active"><a href="{{ url('admin/applicant') }}"><i class="fa fa-inbox"></i> Inbox <span class="label label-primary pull-right">12</span></a></li>
                     <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
                     <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
                     <li><a href="#"><i class="fa fa-filter"></i> Junk <span class="label label-warning pull-right">65</span></a></li>
@@ -74,7 +74,7 @@
                         <tr>
                           <td><input type="checkbox"></td>
                           <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                          <td class="mailbox-name"><a href="read-mail.html">{{ $applicant->name }}</a></td>
+                          <td class="mailbox-name"><a href="{!! url('admin/applicant', $applicant->id) !!}">{{ $applicant->name }}</a></td>
                           <td class="mailbox-subject"><b>{{ $applicant->email }}</b></td>
                           <td class="mailbox-attachment"></td>
                           <td class="mailbox-date">{{ $applicant->created_at->diffForHumans()}}</td>

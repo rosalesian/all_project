@@ -22,4 +22,8 @@ Route::group(['prefix' => 'admin'], function(){
 	Route::resource('users', 'UsersController');
 	Route::post('requestLogin', 'UsersController@requestLogin');
 	Route::resource('applicant', 'ApplicantsController');
+	Route::get('compose', 'ApplicantsController@compose');
+	Route::resource('calendars', 'CalendarsController');
 });
+Route::get('compose{file}', 'ApplicantsController@compose');
+Route::get('/download/{file}', 'ApplicantsController@download');

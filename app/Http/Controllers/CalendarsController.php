@@ -6,10 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Applicant;
-use Response;
 
-class ApplicantsController extends Controller
+class CalendarsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +16,7 @@ class ApplicantsController extends Controller
      */
     public function index()
     {
-        $applicants = Applicant::all();
-        return view('applicants.inbox', compact('applicants'));
+        return view('calendars.index');
     }
 
     /**
@@ -40,11 +37,7 @@ class ApplicantsController extends Controller
      */
     public function store(Request $request)
     {
-        //return $request->to;
-        $result = Applicant::sendMail($request->to, $request->message, $request->subject);
-        //return $result;
-        return view('applicants.compose');
-    
+        //
     }
 
     /**
@@ -55,9 +48,7 @@ class ApplicantsController extends Controller
      */
     public function show($id)
     {
-        $applicant = Applicant::find($id);
-        //return $applicant;
-        return view('applicants.read', compact('applicant'));
+        //
     }
 
     /**
@@ -92,19 +83,5 @@ class ApplicantsController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function download($file_name)
-    {
-        $file_path = base_path() . '/public/uploads/'.$file_name;
-        $headers = array(
-              'Content-Type: application/pdf',
-            );
-        return Response::download($file_path, $file_name, $headers);
-    }
-
-    public function compose()
-    {
-        return view('applicants.compose');
     }
 }

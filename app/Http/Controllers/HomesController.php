@@ -11,9 +11,12 @@ use App\Branch;
 use \Input as Input;
 use Response;
 use App\Applicant;
+use Mail;
 
 class HomesController extends Controller
 {
+    private $_email;
+    private $_name;
     /**
      * Display a listing of the resource.
      *
@@ -52,11 +55,14 @@ class HomesController extends Controller
             $file = $request->file('resume');
             $file->move('uploads', $file->getClientOriginalName());
 
+            $this->_email = $request->email;
+            $this->_name = $request->name;
+
             $data = [
                 'career_id' => $request->career_id,
                 'branch_id' => $request->branch_id,
-                'name' => $request->name,
-                'email' => $request->email,
+                'name' => $this->_name,
+                'email' => $this->_email,
                 'message' => $request->message,
                 'status' => 'unread',
                 'file_name' => $request->file('resume')->getClientOriginalName(),
@@ -64,12 +70,22 @@ class HomesController extends Controller
             ];
 
             $applicant = Applicant::create($data);
+
+            //sent email
+            Mail::send('public.emails.reminder', ['name' => $this->_name], function ($message) {
+                //$message->from('hello@app.com', 'Your Application');
+
+                //$message->to('iurosales.pgkhc@gmail.com', 'Some Guy')->from('otheremail@some.com')->subject('Your Reminder!');
+                $message->to($this->_email, 'Some Guy')->from('otheremail@some.com')->subject('Your Reminder!');
+            });
+
         }
 
         $careers = Career::all();
         $careers_list = Career::lists('title', 'id');
         $branch_list = Branch::lists('branch_name' ,'id');
         return view('public.homes.index', compact('careers', 'careers_list', 'branch_list'));
+      
     }
 
     /**

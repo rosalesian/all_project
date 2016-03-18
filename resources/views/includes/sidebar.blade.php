@@ -51,10 +51,17 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="mailbox.html">Inbox <span class="label label-primary pull-right">13</span></a></li>
+                <li class="active"><a href="{{ url('admin/applicant') }}">Inbox <span class="label label-primary pull-right">13</span></a></li>
                 <li><a href="compose.html">Compose</a></li>
                 <li><a href="read-mail.html">Read</a></li>
               </ul>
+            </li>
+
+             <li class="active">
+              <a href="{{ url('admin/calendars') }}">
+                <i class="fa fa-calendar"></i> <span>Calendar</span>
+                <small class="label pull-right bg-red">3</small>
+              </a>
             </li>
          
 
