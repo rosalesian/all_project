@@ -19,6 +19,7 @@ class CreateApplicantsTable extends Migration
             $table->string('name', 255);
             $table->string('email', 255);
             $table->string('resume', 255);
+            $table->string('file_name', 255);
             $table->text('message');
             $table->string('status', 7);
             $table->softDeletes();
